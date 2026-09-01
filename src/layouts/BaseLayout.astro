@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'WeiDong — Mobile Engineering Solutions',
+  description = 'Practical solutions, tools, and experiments for real-world mobile engineering problems.',
+} = Astro.props;
+
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const path = Astro.url.pathname;
+const links = [
+  ['Home', base],
+  ['Solutions', `${base}solutions/`],
+  ['Projects', `${base}projects/`],
+  ['About', `${base}about/`],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header>
+        <a class="brand" href={base}>WeiDong</a>
+        <nav aria-label="Primary navigation">
+          {links.map(([label, href]) => (
+            <a href={href} aria-current={path === href ? 'page' : undefined}>{label}</a>
+          ))}
+        </nav>
+      </header>
+      <main><slot /></main>
+      <footer>Building practical mobile engineering solutions, one problem at a time.</footer>
+    </div>
+  </body>
+</html>

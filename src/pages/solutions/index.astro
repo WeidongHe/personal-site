@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<BaseLayout title="Solutions — WeiDong" description="Practical mobile engineering solutions and field notes.">
+  <p class="eyebrow">Solutions</p>
+  <h1>Problems investigated and explained.</h1>
+  <p class="lead">Clear diagnosis, reproducible evidence, and a path to implementation.</p>
+
+  <div class="grid">
+    <article class="card">
+      <span class="status">FIRST TOPIC · IN PROGRESS</span>
+      <h2><a href={`${base}solutions/android-16kb-page-size/`}>Android 16KB Page Size</a></h2>
+      <p>Understand native-library compatibility, detect issues, migrate, and verify the result.</p>
+    </article>
+  </div>
+</BaseLayout>

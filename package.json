@@ -1,0 +1,17 @@
+{
+  "name": "personal-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "start": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "astro": "ASTRO_TELEMETRY_DISABLED=1 astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "latest",
+    "astro": "latest"
+  }
+}

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+
+<BaseLayout>
+  <p class="eyebrow">Mobile engineering · Android · HarmonyOS</p>
+  <h1>From real problems to practical solutions.</h1>
+  <p class="lead">
+    I investigate real-world mobile engineering problems and turn the findings into
+    reusable solutions, demos, tools, and technical articles.
+  </p>
+  <div class="actions">
+    <a class="button" href={`${base}solutions/`}>Explore solutions</a>
+    <a class="button secondary" href={`${base}projects/`}>View projects</a>
+  </div>
+
+  <section>
+    <h2>Current focus</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="status">IN PROGRESS</span>
+        <h3><a href={`${base}solutions/android-16kb-page-size/`}>Android 16KB Page Size</a></h3>
+        <p>Compatibility research, migration guidance, verification, and tooling.</p>
+      </article>
+      <article class="card">
+        <span class="status">WORKFLOW</span>
+        <h3>Problem → Solution → Tool → Article</h3>
+        <p>Each topic becomes a small, verifiable body of public work.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
